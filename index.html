@@ -1,0 +1,532 @@
+	<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Báo nói "Khát vọng"</title>
+
+<style>
+
+/* ===== BACKGROUND ===== */
+body{
+    margin:0;
+    font-family: Tahoma, sans-serif;
+    background:
+    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.6)),
+    url("nen-chim.png") center/cover fixed;
+    color:white;
+    animation: fadeIn 1.5s ease;
+}
+
+/* Fade trang */
+@keyframes fadeIn{
+    from{opacity:0}
+    to{opacity:1}
+}
+
+/* ===== HEADER ===== */
+header{
+    background:linear-gradient(90deg,#0b3d2e,#145a32);
+    text-align:center;
+    padding:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,.6);
+}
+
+header img{
+    width:90px;
+}
+
+header h1{
+    color:#ffd966;
+    letter-spacing:2px;
+}
+
+/* ===== CONTAINER ===== */
+.container{
+    max-width:800px;
+    margin:30px auto;
+    padding:20px;
+    background:rgba(0,0,0,.6);
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.7);
+    border: solid;
+}
+
+/* ===== TITLE ===== */
+.issue-title{
+    text-align:center;
+    font-size:22px;
+    margin-bottom:25px;
+    color:#9be7c4;
+}
+
+/* ===== AUDIO CARD ===== */
+.audio-card{
+    background:rgba(255,255,255,.08);
+    padding:10px;
+    border-radius:15px;
+    margin-bottom:20px;
+    transition:.4s;
+    border: solid;
+}
+audio {
+width: 100%;
+}
+/* Hover card */
+.audio-card:hover{
+    transform:translateY(-6px) scale(1.01);
+    box-shadow:0 12px 25px rgba(0,0,0,.6);
+}
+
+.audio-card h3{
+    color:#ffd966;
+}
+
+/* ===== BUTTON ===== */
+button{
+    width:100%;
+    padding:15px;
+    font-size:20px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(45deg,#3498db,#1abc9c);
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+/* Hover button */
+button:hover{
+    transform:scale(1.05);
+    box-shadow:0 5px 15px rgba(0,0,0,.6);
+}
+
+/* Click */
+button:active{
+    transform:scale(.95);
+}
+
+/* ===== GAME ===== */
+.score{
+    text-align:center;
+    font-size:20px;
+    color:#ffe600;
+}
+
+.question-box{
+    background:rgba(255,255,255,.1);
+    padding:15px;
+    border-radius:10px;
+    margin:15px 0;
+}
+
+/* Ô chữ */
+input{
+    width:45px;
+    height:45px;
+    text-align:center;
+    font-size:26px;
+    border-radius:8px;
+    border:none;
+    transition:.2s;
+}
+
+/* Focus input */
+input:focus{
+    outline:none;
+    background:#ffeaa7;
+    transform:scale(1.1);
+}
+
+/* ===== RESULT ===== */
+.correct{color:#2ecc71}
+.wrong{color:#ff7675}
+
+.result{
+    text-align:center;
+    font-size:20px;
+    margin-top:15px;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    text-align:center;
+    opacity:.7;
+    margin:30px 0;
+    font-size:14px;
+}
+
+ .red {
+  color: red;
+  display: contents;
+font-weight: 600;
+}
+.color_col {
+ background-color: #4dff00;
+}
+table {
+display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+/* == slide == */
+.slideshow{
+  max-width:900px;
+  margin:30px auto;
+  overflow:hidden;
+}
+
+.slide-pair{
+  display:none;
+  display:flex;
+  gap:15px;
+  animation:fade 1s;
+}
+
+.slide-pair img{
+  width:49%;
+  object-fit:cover;
+  border-radius:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,.4);
+}
+
+@keyframes fade{
+  from{opacity:0}
+  to{opacity:1}
+}
+
+/* responsive*/
+/* ===== RESPONSIVE MOBILE ===== */
+@media (max-width: 768px){
+
+    /* Header */
+    header{
+        padding:15px;
+    }
+
+    header img{
+        width:60px;
+    }
+
+    header h1{
+        font-size:20px;
+        letter-spacing:1px;
+    }
+
+    /* Container */
+    .container{
+        width:90%;
+        margin:15px auto;
+        padding:15px;
+        border-radius:15px;
+    }
+
+    /* Tiêu đề */
+    .issue-title{
+        font-size:18px;
+    }
+
+    /* Card audio */
+    .audio-card{
+        padding:12px;
+        margin-bottom:15px;
+    }
+
+    .audio-card h3{
+        font-size:16px;
+    }
+
+    /* Audio */
+    audio{
+        height:35px;
+    }
+
+    /* Button */
+    button{
+        font-size:16px;
+        padding:12px;
+        border-radius:10px;
+    }
+
+    /* Chữ chung */
+    body{
+        font-size:14px;
+    }
+
+    /* Score */
+    .score{
+        font-size:16px;
+    }
+    tbody {
+	width: 100%;
+	tr {
+	width: 100%;
+	}
+	td {
+	   padding: 3px;
+	  input{
+    	     width:100%;
+	     height: 35px;
+text-align:center;
+    font-size:26px;
+    border-radius:8px;
+    border:none;
+    transition:.2s;
+	  }
+	}
+    }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="logo-luc-quan-2.png">
+<h1>BÁO NÓI</h1>
+<h2>Tiểu đoàn 10 – Trường Sĩ quan Lục quân 2</h2>
+<p>Phục vụ tuyên truyền giáo dục</p>
+</header>
+
+<div class="container">
+  <div class="slideshow">
+
+  <div class="slide-pair">
+    <img src="./slide-1.jpg">
+    <img src="./slide-2.jpg">
+  </div>
+
+  <div class="slide-pair">
+    <img src="./slide-3.jpg">
+    <img src="./slide-4.jpg">
+  </div>
+
+  <div class="slide-pair">
+    <img src="./slide-5.jpg">
+    <img src="./slide-6.jpg">
+  </div>
+
+</div>
+
+
+  <div class="issue-title">
+    SỐ BÁO: <strong>KHÁT VỌNG</strong>
+  </div>
+
+  <!-- BÀI 1 -->
+  <div class="audio-card">
+    <h3>Bài 1: Xã luận</h3>
+    <audio controls preload="none">
+      <source src="./xa-luan.mp3.m4a"  type="audio/mpeg"/>
+    </audio>
+    </audio>
+  </div> 
+
+  <!-- BÀI 2 -->
+  <div class="audio-card">
+    <h3>Bài 2: Thanh niên làm theo lời Bác</h3>
+    <audio controls preload="none">
+	<source src="./thanh-nien-lam-theo-loi-bac.mp3.m4a" type="audio/mpeg" />
+    </audio>
+  </div>
+
+  <!-- BÀI 3 -->
+  <div class="audio-card">
+    <h3>Bài 3: Truyện ngắn</h3>
+    <audio controls preload="none">
+      <source src="truyen-ngan.mp3.m4a" type="audio/mpeg" />
+    </audio> 
+  </div>
+
+</div>
+
+<div class="container">
+    <h1>🎯 Trò Chơi Giải Ô Chữ</h1>
+
+    <div class="score">Điểm: <span id="score">0</span></div>
+
+    <!-- Bảng ô chữ -->
+    <div class="grid" id="grid">
+	<table>
+	 <tbody>
+	  <tr class="input-group input-group-1">
+	   <td class="row"></td>
+           <td class="row"></td>
+	   <td class="row"></td>
+           <td class="row"></td>
+	   <td class="row"></td>
+	   <td class="row"><input maxlength="1" onKeyup="next_input(this)" class="color_col"></td>
+           <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+	   <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+           <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+	   <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+           <td class="row"></td>
+           <td class="row"></td>
+	  </tr>
+	  <tr class="input-group input-group-2">
+	   <td class="row"></td>
+           <td class="row"></td>
+	   <td class="row"></td>
+	   <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+           <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+	   <td class="row"><input maxlength="1" onKeyup="next_input(this)" class="color_col"></td>
+           <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+	   <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+           <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+	   <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+           <td class="row"></td>
+           <td class="row"></td>
+	  </tr>
+	  <tr class="input-group input-group-3">
+	   <td class="row"></td>
+           <td class="row"></td>
+	   <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+	   <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+           <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+	   <td class="row"><input maxlength="1" onKeyup="next_input(this)" class="color_col"></td>
+           <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+	   <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+           <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+	   <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+           <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+	   <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+	  </tr>
+	  <tr class="input-group input-group-4">
+	   <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+           <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+           <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+	   <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+	   <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+           <td class="row"><input maxlength="1" onKeyup="next_input(this)" class="color_col"></td>
+	   <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+           <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+	   <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+           <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+	   <td class="row"><input maxlength="1" onKeyup="next_input(this)"></td>
+           <td class="row"></td>
+	  </tr>
+	  <tr class="input-group input-group-5">
+	   <td class="row"></td>
+           <td class="row"></td>
+	   <td class="row"></td>
+           <td class="row"></td>
+	   <td class="row"></td>
+	   <td class="row"><input maxlength="1" class="color_col"></td>
+	   <td class="row"></td>
+           <td class="row"></td>
+	   <td class="row"></td>
+           <td class="row"></td>
+	   <td class="row"></td>
+	  </tr>
+	 </tbody>
+	</table>
+    </div>
+
+    <!-- Câu hỏi -->
+    <div class="question-box">
+        <h2>Câu hỏi</h2>
+        <div class="question_1">1. Nourish pure <p class="red">_e_rt</p>, forge bright mind, cherish ambitions.</div>
+        <div class="question_2">2. Our Army is loyal to the Party, <p class="red">d_ _o_ed</p> to the people, always ready to fight 
+and sacrifice for  the independence and freedom of the Fatherland and for socialism.</div>
+        <div class="question_3">3. "The quality of training at the <p class="red">_ _ _ _ _ _</p> is the combat readiness of the unit"</div>
+        <div class="question_4">4. What quality makes a soldier trustworthy and dependable in every assigned mission ? </br> Answer: <p class="red">R_l_ _ _ _ _ _ty</p> </div> 
+        <div class="question_5">5. In the Four Nos policy, which number is "No siding with one country against another" ?</div>
+	<div><p class="red p_space">A.1</p>  <p class="red p_space">B.2</p> <p class="red p_space">C.3</p>  <p class="red p_space">D.4</p></div>
+    </div>
+
+    <button class = "button_check" onclick="checkAnswer()">Kiểm Tra Kết Quả</button>
+
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+  function next_input(el) {
+    if(el.value) {
+    const group = el.closest(".input-group"); // tìm group cha
+    const inputs = group.querySelectorAll("input"); // chỉ lấy input trong group
+
+    const i = [...inputs].indexOf(el);
+
+    inputs[i + 1]?.focus();
+   }
+  }
+
+    const answers = [
+        "HEART",   // Câu 1 - Hàng ngang 1
+        "DEVOTED",     // Câu 2 - Hàng ngang 3
+        "UNIVERSITY",
+	"RELIABILITY",
+ 	"2"
+    ];
+    function getAllGroupsData() {
+    const result = {};
+    document.querySelectorAll(".input-group").forEach(group => {
+    const classes = [...group.classList]
+    .filter(c => c !== "input-group");
+    const groupName = classes[0] || "default";
+    const values = [...group.querySelectorAll("input")]
+    .map(input => input.value);
+    const str = values.join("");
+    result[groupName] = str;
+    });
+
+    return result;
+	}
+    let datas;
+    function checkAnswer() {
+       let correctCount = 0;
+       datas = getAllGroupsData();
+       Object.values(datas).forEach((item,index) => {
+  	if (item.toLowerCase() === answers[index].toLowerCase()) {
+  	 correctCount++;
+	}
+       });
+      score = correctCount * 20;
+        document.getElementById("score").textContent = score;
+
+        const result = document.getElementById("result");
+
+        if (correctCount === answers.length) {
+            result.textContent = "🎉 Xuất sắc! Bạn đã trả lời đúng tất cả!";
+            result.className = "result correct";
+        } else {
+            result.textContent = `❌ Bạn đúng ${correctCount}/${answers.length} câu.`;
+            result.className = "result wrong";
+        }
+    }
+/* == slide == */
+
+let index=0;
+const slides=document.querySelectorAll(".slide-pair");
+
+function autoSlide(){
+
+  slides.forEach(s=>{
+    s.style.display="none";
+  });
+
+  index++;
+
+  if(index>slides.length){
+    index=1;
+  }
+
+  slides[index-1].style.display="flex";
+}
+
+autoSlide();
+
+setInterval(autoSlide,3000); // 3 giây đổi
+
+
+</script>
+
+<footer>
+  © 2026 | Báo nói "Khát vọng" – Tiểu đoàn 10 – Trường Sĩ quan Lục quân 2
+</footer>
+
+</body>
+</html>
