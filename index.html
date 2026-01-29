@@ -43,8 +43,6 @@ header h1{
 
 /* ===== CONTAINER ===== */
 .container{
-    max-width:800px;
-    margin:30px auto;
     padding:20px;
     background:rgba(0,0,0,.6);
     border-radius:20px;
@@ -226,9 +224,11 @@ display: flex;
     }
 
     /* Container */
+    .container_main {
+      width:90%;
+      margin:15px auto;
+    }
     .container{
-        width:90%;
-        margin:15px auto;
         padding:15px;
         border-radius:15px;
     }
@@ -245,7 +245,8 @@ display: flex;
     }
 
     .audio-card h3{
-        font-size:16px;
+        font-size:14px;
+        text-align: justify;
     }
 
     /* Audio */
@@ -279,11 +280,11 @@ display: flex;
 	  input{
     	     width:100%;
 	     height: 35px;
-text-align:center;
-    font-size:26px;
-    border-radius:8px;
-    border:none;
-    transition:.2s;
+             text-align:center;
+             font-size:26px;
+             border-radius:8px;
+             border:none;
+             transition:.2s;
 	  }
 	}
     }
@@ -294,8 +295,8 @@ text-align:center;
     font-size: 15px;
 	}
 	.iframe_ytb {
-		width: 300px;
-		height: 175px;
+		width: 270px;
+		height: 160px;
 	}
 }
 /* Ảnh nhỏ */
@@ -327,8 +328,106 @@ text-align:center;
   border-radius: 12px;
 }
 
+/*container*/
+.container_main {  
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.container_center {
+   width: 50%;
+}
+.container_left, .container_right{
+    width: 23%;
+    margin: 20px 15px 0;
+}
+@media (max-width: 768px) {
+  .container_main {
+    flex-direction: column;
+  }
+
+  /* Đổi thứ tự */
+  .container_center { order: 1; width: 100%;} /* lên đầu */
+  .container_left   { order: 2; width: 100%; margin: 20px auto 0;}
+  .container_right  { order: 3; width: 100%; margin: 20px auto 0;}
+}
+
+
+/* NEWS */
+.news-item {
+  display: flex;
+  gap: 15px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Ảnh */
+.news-thumb {
+  width: 30%;
+  flex-shrink: 0;
+}
+
+.news-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Nội dung */
+.news-content {
+  padding: 15px;
+  flex: 1;
+}
+
+.news-title {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #0b3d2e;
+}
+
+.news-desc {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.news-btn {
+  text-decoration: none;
+  color: #3498db;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.news-btn:hover {
+  text-decoration: underline;
+}
+
+/* Responsive mobile */
+@media (max-width: 786px) {
+  .news-thumb {
+    width: 35%;
+    height: 155px;
+  }
+  .news-content p {
+    height: 33%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 13px;
+  }
+  .news-title {
+    font-size: 13px;
+  }
+}
 
 </style>
+
 </head>
 
 <body>
@@ -339,7 +438,51 @@ text-align:center;
 <h2>Tiểu đoàn 10 – Trường Sĩ quan Lục quân 2</h2>
 <p>Phục vụ tuyên truyền giáo dục</p>
 </header>
+<div class="container_main">
+<div class="container_left">
+  <div class="news-item">
+    <div class="news-thumb">
+      <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide1.JPG?raw=true" alt="Ảnh bài báo">
+    </div>
 
+    <div class="news-content">
+      <h3 class="news-title">
+        Tuổi trẻ Tiểu đoàn 10 với phong trào thi đua rèn luyện
+    </h3>
+
+    <p class="news-desc">
+      Phong trào thi đua rèn luyện kỷ luật, nâng cao thể lực và
+      bản lĩnh chính trị đang được đoàn viên thanh niên
+      Tiểu đoàn 10 hưởng ứng tích cực, góp phần xây dựng
+      đơn vị vững mạnh toàn diện.
+    </p>
+
+    <a href="#" class="news-btn">Xem chi tiết →</a>
+   </div>
+  </div>
+<div class="news-item">
+    <div class="news-thumb">
+      <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide1.JPG?raw=true" alt="Ảnh bài báo">
+    </div>
+
+    <div class="news-content">
+      <h3 class="news-title">
+        Tuổi trẻ Tiểu đoàn 10 với phong trào thi đua rèn luyện
+    </h3>
+
+    <p class="news-desc">
+      Phong trào thi đua rèn luyện kỷ luật, nâng cao thể lực và
+      bản lĩnh chính trị đang được đoàn viên thanh niên
+      Tiểu đoàn 10 hưởng ứng tích cực, góp phần xây dựng
+      đơn vị vững mạnh toàn diện.
+    </p>
+
+    <a href="#" class="news-btn">Xem chi tiết →</a>
+   </div>
+  </div>
+
+</div>
+<div class="container_center">
 <div class="container">
   <div class="title_slide">HÌNH ẢNH MỘT SỐ HOẠT ĐỘNG CỦA ĐƠN VỊ</div>
   <div class="slideshow">
@@ -578,6 +721,50 @@ and sacrifice for  the independence and freedom of the Fatherland and for social
 <div id="imgViewer" onclick="closeImg()">
   <img id="fullImg">
 </div>
+</div>
+<div class="container_right">
+  <div class="news-item">
+    <div class="news-thumb">
+      <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide1.JPG?raw=true" alt="Ảnh bài báo">
+    </div>
+
+    <div class="news-content">
+      <h3 class="news-title">
+        Tuổi trẻ Tiểu đoàn 10 với phong trào thi đua rèn luyện
+    </h3>
+
+    <p class="news-desc">
+      Phong trào thi đua rèn luyện kỷ luật, nâng cao thể lực và
+      bản lĩnh chính trị đang được đoàn viên thanh niên
+      Tiểu đoàn 10 hưởng ứng tích cực, góp phần xây dựng
+      đơn vị vững mạnh toàn diện.
+    </p>
+
+    <a href="#" class="news-btn">Xem chi tiết →</a>
+   </div>
+  </div>
+  <div class="news-item">
+    <div class="news-thumb">
+      <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide1.JPG?raw=true" alt="Ảnh bài báo">
+    </div>
+
+    <div class="news-content">
+      <h3 class="news-title">
+        Tuổi trẻ Tiểu đoàn 10 với phong trào thi đua rèn luyện
+    </h3>
+
+    <p class="news-desc">
+      Phong trào thi đua rèn luyện kỷ luật, nâng cao thể lực và
+      bản lĩnh chính trị đang được đoàn viên thanh niên
+      Tiểu đoàn 10 hưởng ứng tích cực, góp phần xây dựng
+      đơn vị vững mạnh toàn diện.
+    </p>
+
+    <a href="#" class="news-btn">Xem chi tiết →</a>
+   </div>
+  </div>
+</div>
+</div>
 <script>
   function next_input(el) {
     if(el.value) {
@@ -673,10 +860,3 @@ function closeImg(){
 
 </body>
 </html>
-
-
-
-
-
-
-
