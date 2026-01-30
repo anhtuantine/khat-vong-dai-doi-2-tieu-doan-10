@@ -48,6 +48,7 @@ header h1{
     border-radius:20px;
     box-shadow:0 10px 30px rgba(0,0,0,.7);
     border: solid;
+    margin-bottom: 20px;
 }
 
 /* ===== TITLE ===== */
@@ -183,11 +184,16 @@ display: flex;
   height: 300px;
 }
 
-.slide-pair img{
+.slide-pair img, .slide-image img{
   width:49%;
   object-fit:cover;
   border-radius:12px;
   box-shadow:0 5px 15px rgba(0,0,0,.4);
+  margin: 5px;
+}
+.slide-image img {
+ width: 95%;
+margin: 20px;
 }
 	.title_slide {
     font-size: 25px;
@@ -486,70 +492,79 @@ display: flex;
 <div class="container">
   <div class="title_slide">HÌNH ẢNH MỘT SỐ HOẠT ĐỘNG CỦA ĐƠN VỊ</div>
   <div class="slideshow">
+   <div class="slide-pair">
+     <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide1.JPG?raw=true" class="thumb" onclick="openImg(this)">
+     <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-2.JPG?raw=true" class="thumb" onclick="openImg(this)">
+   </div>
 
-  <div class="slide-pair">
-    <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide1.JPG?raw=true" class="thumb" onclick="openImg(this)">
-    <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-2.JPG?raw=true" class="thumb" onclick="openImg(this)">
-  </div>
+   <div class="slide-pair">
+     <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-3.JPG?raw=true" class="thumb" onclick="openImg(this)">
+     <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-4.JPG?raw=true" class="thumb" onclick="openImg(this)">
+   </div>
 
-  <div class="slide-pair">
-    <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-3.JPG?raw=true" class="thumb" onclick="openImg(this)">
-    <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-4.JPG?raw=true" class="thumb" onclick="openImg(this)">
-  </div>
+   <div class="slide-pair">
+     <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-5.JPG?raw=true" class="thumb" onclick="openImg(this)">
+     <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-6.JPG?raw=true" class="thumb" onclick="openImg(this)">
+   </div>
+   <div class="slide-pair">
+     <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-7.jpg?raw=true" class="thumb" onclick="openImg(this)">
+     <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-8.jpg?raw=true" class="thumb" onclick="openImg(this)">
+   </div>
 
-  <div class="slide-pair">
-    <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-5.JPG?raw=true" class="thumb" onclick="openImg(this)">
-    <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-6.JPG?raw=true" class="thumb" onclick="openImg(this)">
-  </div>
-	  <div class="slide-pair">
-    <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-7.jpg?raw=true" class="thumb" onclick="openImg(this)">
-    <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-8.jpg?raw=true" class="thumb" onclick="openImg(this)">
-  </div>
-
-  <div class="slide-pair">
+   <div class="slide-pair">
     <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-9.JPG?raw=true" class="thumb" onclick="openImg(this)">
     <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-10.JPG?raw=true" class="thumb" onclick="openImg(this)">
-  </div>
+   </div>
 
-  <div class="slide-pair">
+   <div class="slide-pair">
     <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-11.JPG?raw=true" class="thumb" onclick="openImg(this)">
     <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-12.JPG?raw=true" class="thumb" onclick="openImg(this)">
-  </div>
-  <div class="slide-pair">
+   </div>
+   <div class="slide-pair">
     <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-13.JPG?raw=true" class="thumb" onclick="openImg(this)">
     <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-14.JPG?raw=true" class="thumb" onclick="openImg(this)">
-  </div>
+   </div>
 
-  <div class="slide-pair">
+   <div class="slide-pair">
     <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-15.JPG?raw=true" class="thumb" onclick="openImg(this)">
     <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-16.JPG?raw=true" class="thumb" onclick="openImg(this)">
-  </div>
+   </div>
 
-  <div class="slide-pair">
+   <div class="slide-pair">
     <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-17.JPG?raw=true" class="thumb" onclick="openImg(this)">
     <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-18.JPG?raw=true" class="thumb" onclick="openImg(this)">
-  </div>
-	  <div class="slide-pair">
+   </div>
+   <div class="slide-pair">
     <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-19.JPG?raw=true" class="thumb" onclick="openImg(this)">
     <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-20.JPG?raw=true" class="thumb" onclick="openImg(this)">
-  </div>
+   </div>
 
-  <div class="slide-pair">
+   <div class="slide-pair">
     <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-21.JPG?raw=true" class="thumb" onclick="openImg(this)">
     <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-22.JPG?raw=true" class="thumb" onclick="openImg(this)">
-  </div>
+   </div>
 
-  <div class="slide-pair">
+   <div class="slide-pair">
     <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-23.JPG?raw=true" class="thumb" onclick="openImg(this)">
     <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-24.JPG?raw=true" class="thumb" onclick="openImg(this)">
-  </div>
-	  <div class="slide-pair">
+   </div>
+   <div class="slide-pair">
     <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-25.JPG?raw=true" class="thumb" onclick="openImg(this)">
     <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/slide-26.JPG?raw=true" class="thumb" onclick="openImg(this)">
-  </div>
-
+   </div>
 </div>
+<div class="container">
+  <div class="title_slide">ẢNH BIẾM HỌA</div>
+  <div class="slideshowimage">
+    <div class="slide-image">
+      <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/biem-hoa-1.jpg?raw=true" class="thumb" onclick="openImg(this)">
+    </div>
 
+    <div class="slide-image">
+      <img src="https://github.com/anhtuantine/khat-vong-dai-doi-2-tieu-doan-10/blob/main/biem-hoa-2.png?raw=true" class="thumb" onclick="openImg(this)">
+    </div>
+  </div>
+</div>
 
   <div class="issue-title">
     SỐ BÁO: <strong>KHÁT VỌNG</strong>
@@ -843,6 +858,31 @@ function autoSlide(){
 autoSlide();
 
 setInterval(autoSlide,5000); // 3 giây đổi
+
+
+
+/* ảnh biếm họa slide */
+let indexImage=0;
+const slides_image=document.querySelectorAll(".slide-image");
+
+function autoSlideImage(){
+
+  slides_image.forEach(s=>{
+    s.style.display="none";
+  });
+
+  indexImage++;
+
+  if(indexImage>slides_image.length){
+    indexImage=1;
+  }
+
+  slides_image[indexImage-1].style.display="flex";
+}
+autoSlideImage();
+setInterval(autoSlideImage,5000); // 3 giây đổi
+
+
 
 function openImg(el){
   document.getElementById("fullImg").src = el.src;
